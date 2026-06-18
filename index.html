@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
-  <meta name="description" content="UPAGE diseña ecosistemas digitales de alta conversión para estudios de arquitectura. Mobile-First, ultra rápidas, leads automatizados."/>
-  <title>UPAGE | Ecosistemas Digitales para Arquitectura</title>
+  <meta name="description" content="UPAGE diseña ecosistemas digitales de alta conversión para negocios y profesionales independientes. Mobile-First, ultra rápidas, leads automatizados."/>
+  <title>UPAGE | Ecosistemas Digitales de Alta Conversión</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;0,700&display=swap" rel="stylesheet"/>
   <!-- Lenis CSS -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
   
@@ -24,6 +24,8 @@
   </script>
   <!-- TikTok Pixel Code End -->
 
+  <link rel="stylesheet" href="styles/fonts.css"/>
+  <link rel="stylesheet" href="styles/theme.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -42,40 +44,46 @@
      S1 — HERO
 ═══════════════════════════════════ -->
 <section id="hero" class="hero">
-  <!-- Background: animated architectural grid -->
-  <div class="hero__grid" aria-hidden="true"></div>
-  <!-- Floating orb -->
-  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+  <!-- Background video -->
+  <video
+    id="hero-video"
+    class="hero__video"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_083109_283f3553-e28f-428b-a723-d639c617eb2b.mp4"
+    autoplay muted playsinline preload="auto"
+    aria-hidden="true"
+  ></video>
+  <div class="hero__video-overlay" aria-hidden="true"></div>
 
-  <!-- Brand -->
-  <div class="hero__brand">UPAGE</div>
+  <!-- Nav -->
+  <nav class="hero__nav">
+    <span class="hero__logo">UPAGE<sup>®</sup></span>
+    <div class="hero__menu">
+      <a href="#hero" class="is-active">Inicio</a>
+      <a href="#solucion">Soluciones</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a href="#contacto" class="hero__nav-cta">Empezar Proyecto</a>
+  </nav>
 
   <!-- Content -->
   <div class="hero__content">
-    <div class="hero__eyebrow">
-      <span class="hero__eyebrow-line"></span>
-      Agencia Digital · Arquitectura
-    </div>
-
-    <h1 class="hero__title" id="hero-title">
-      <span class="line-wrap"><span class="line-inner">¿Tus diseños son</span></span>
-      <span class="line-wrap"><span class="line-inner line-inner--gold">de primer nivel</span></span>
-      <span class="line-wrap"><span class="line-inner">pero tu web</span></span>
-      <span class="line-wrap"><span class="line-inner">no atrae clientes?</span></span>
+    <h1 class="hero__heading animate-fade-rise">
+      ¿Tus diseños son <em>de primer nivel</em> pero tu web <em>no cierra clientes?</em>
     </h1>
 
-    <p class="hero__subtitle" id="hero-sub">
-      Tu estudio necesita más que un portafolio bonito.<br>
-      Necesita una <strong>máquina de captación de leads.</strong>
+    <p class="hero__desc animate-fade-rise-delay">
+      Tu negocio no necesita otro portafolio bonito. Necesita una máquina de captación de leads, lista en 7 días.
     </p>
 
-    <div class="hero__scroll" id="hero-scroll" aria-label="Desliza hacia abajo">
-      <span class="hero__scroll-text">Descubre cómo</span>
-      <div class="hero__scroll-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </div>
-    </div>
+    <a
+      href="https://wa.link/axnt20"
+      target="_blank" rel="noopener noreferrer"
+      class="hero__btn animate-fade-rise-delay-2"
+      aria-label="Agendar consultoría gratuita por WhatsApp">
+      Agendar mi consultoría gratuita
+    </a>
   </div>
 </section>
 
@@ -85,7 +93,7 @@
 <section class="section section--light" id="problema">
   <div class="container">
     <div class="section-header reveal-block">
-      <span class="eyebrow eyebrow--dark">— El Problema</span>
+      <span class="eyebrow eyebrow--dark">El Problema</span>
       <h2 class="section-title section-title--dark">
         Cada día sin una web<br>que convierta,<br>
         <em>pierdes proyectos.</em>
@@ -93,8 +101,8 @@
     </div>
 
     <p class="section-lead section-lead--dark reveal-block" style="--delay:0.15s">
-      Pasas horas perfeccionando cada plano y render. Pero si tu cliente ideal entra desde su celular
-      y tarda más de <strong>3 segundos en entender qué hacer</strong>, lo pierdes para siempre.
+      Pasas horas perfeccionando cada detalle de tu trabajo. Pero si tu cliente ideal entra desde su celular
+      y tarda más de 3 segundos en entender qué hacer, lo pierdes para siempre.
     </p>
 
     <div class="problems-grid">
@@ -136,7 +144,7 @@
           </svg>
         </div>
         <h3 class="problem-item__title">Web que avergüenza</h3>
-        <p class="problem-item__desc">Tu web de 2018 no refleja la calidad de tu estudio en 2025. La primera impresión lo es todo.</p>
+        <p class="problem-item__desc">Tu web de 2018 no refleja la calidad de tu negocio en 2025. La primera impresión lo es todo.</p>
       </article>
     </div>
   </div>
@@ -148,7 +156,7 @@
 <section class="section section--dark" id="solucion">
   <div class="container">
     <div class="section-header reveal-block">
-      <span class="eyebrow eyebrow--gold">— La Solución</span>
+      <span class="eyebrow eyebrow--gold">La Solución</span>
       <h2 class="section-title section-title--light">
         Construimos<br>ecosistemas digitales<br>
         <em class="em--gold">que venden.</em>
@@ -156,8 +164,8 @@
     </div>
 
     <p class="section-lead section-lead--light reveal-block" style="--delay:0.15s">
-      No hacemos "páginas bonitas". Diseñamos infraestructuras web optimizadas para la conversión,
-      pensadas <strong>exclusivamente para estudios de arquitectura.</strong>
+      No hacemos "páginas bonitas". Diseñamos infraestructura web ágil, rápida y optimizada
+      para la conversión, pensada para negocios y profesionales que quieren atraer más clientes.
     </p>
 
     <div class="features-list">
@@ -186,7 +194,7 @@
         <div class="feature-item__num">04</div>
         <div class="feature-item__body">
           <h3 class="feature-item__title">Diseño a tu esencia</h3>
-          <p class="feature-item__desc">Cada pixel refleja la identidad visual de tu estudio. Ningún template. Todo construido desde cero.</p>
+          <p class="feature-item__desc">Cada pixel refleja la identidad visual de tu marca. Ningún template. Todo construido desde cero.</p>
         </div>
       </div>
     </div>
@@ -200,15 +208,15 @@
   <div class="container section__inner">
     
     <div class="section-header reveal-block">
-      <span class="eyebrow">— Metodología Clara</span>
+      <span class="eyebrow">Agilidad Sin Excusas</span>
       <h2 class="section-title">
-        Tu nueva web de alto impacto en 7 días.<br>
-        <em>Sin riesgos. Sin precios ocultos.</em>
+        Tu web de alto impacto, lista en 7 días.<br>
+        <em>Cero riesgo. Cero precios ocultos.</em>
       </h2>
     </div>
 
     <p class="section-lead reveal-block" style="--delay:0.1s">
-      Diseñamos un proceso ágil y transparente para que no pierdas tiempo. Y para tu total tranquilidad, dividimos el pago: solo pagas el saldo final cuando tu web esté lista y perfecta.
+      Un proceso ágil y transparente, diseñado para que avances rápido. Dividimos el pago en dos partes iguales: solo confirmas el saldo final cuando tu web esté lista y perfecta.
     </p>
 
     <!-- Timeline interactivo (Scroll-progress) -->
@@ -226,8 +234,8 @@
         </div>
         <div class="timeline-step__content">
           <span class="timeline-step__time">Paso 1 · Día 1</span>
-          <h3>Arranque y Seguridad</h3>
-          <p>Agendamos una breve llamada para alinear la visión de tu estudio. Para empezar a trabajar, solo realizas un primer pago de $150 USD.</p>
+          <h3>Arranque Inmediato</h3>
+          <p>Agendamos una llamada breve para alinear la visión de tu marca. Para arrancar hoy mismo, solo confirmas con $125 USD / $430.000 COP.</p>
         </div>
       </div>
 
@@ -271,7 +279,7 @@
         <div class="timeline-step__content">
           <span class="timeline-step__time">Paso 4 · Entrega</span>
           <h3>Lanzamiento y Pago Final</h3>
-          <p>Tu web sale a producción en servidores de alta velocidad. Una vez que estés 100% satisfecho con el resultado, realizas el pago final de $145 USD. Cero riesgos para ti.</p>
+          <p>Tu web sale a producción en servidores de alta velocidad. Solo cuando estés 100% satisfecho, cierras con el saldo de $125 USD / $430.000 COP. Cero riesgo para ti.</p>
         </div>
       </div>
 
@@ -282,12 +290,25 @@
       <div class="offer-card__badge">Paz mental garantizada</div>
       <div class="offer-card__body">
         <div class="offer-card__text">
-          <h3 class="offer-card__total">Valor Total: $295 USD</h3>
+          <div class="price-box" id="price-box-main">
+            <span class="price-box__old">Antes $1.720.000 COP</span>
+            <span class="price-box__badge">50% OFF · Oferta de lanzamiento</span>
+            <div class="price-box__current">
+              <span class="price-box__amount is-active" data-currency="usd">
+                <img class="flag-circle" src="https://flagcdn.com/w80/us.png" alt="Bandera de Estados Unidos">
+                $250 USD
+              </span>
+              <span class="price-box__amount" data-currency="cop">
+                <img class="flag-circle" src="https://flagcdn.com/w80/co.png" alt="Bandera de Colombia">
+                $860.000 COP
+              </span>
+            </div>
+          </div>
           <p class="offer-card__note">Único pago. Sin mensualidades por diseño ni sorpresas.</p>
         </div>
         <div class="offer-card__cta">
           <a href="#contacto" class="btn-main">
-            <span class="btn-main__text">Empezar mi proyecto con $150</span>
+            <span class="btn-main__text">Quiero mi web ya, desde $125 USD</span>
             <span class="btn-main__icon" aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -303,7 +324,7 @@
 <section class="section section--light" id="portafolio">
   <div class="container">
     <div class="section-header reveal-block">
-      <span class="eyebrow eyebrow--dark">— Nuestro Trabajo</span>
+      <span class="eyebrow eyebrow--dark">Nuestro Trabajo</span>
       <h2 class="section-title section-title--dark">
         Sitios que ya están<br>
         <em>generando resultados.</em>
@@ -317,7 +338,7 @@
     <div class="portfolio-grid portfolio-grid--desktop">
 
       <!-- Vértice -->
-      <article class="portfolio-card reveal-scale" style="--delay:0.1s" aria-label="Proyecto Vértice Arquitectura">
+      <article class="portfolio-card reveal-scale" style="--delay:0.1s" aria-label="Proyecto Vértice">
         <div class="portfolio-card__desktop">
           <div class="portfolio-card__topbar" aria-hidden="true">
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -330,7 +351,7 @@
                 poster="images/vertice_desktop.png"
                 autoplay muted loop playsinline
                 preload="none"
-                aria-label="Vista previa animada de Vértice Arquitectura"
+                aria-label="Vista previa animada de Vértice"
               ></video>
             </div>
             <div class="portfolio-card__shine" aria-hidden="true"></div>
@@ -339,14 +360,14 @@
         <div class="portfolio-card__info">
           <div class="portfolio-card__dot" aria-hidden="true"></div>
           <div>
-            <strong class="portfolio-card__name">Vértice Arquitectura</strong>
+            <strong class="portfolio-card__name">Vértice</strong>
             <span class="portfolio-card__tag">Buenos Aires · Web Premium</span>
           </div>
         </div>
       </article>
 
       <!-- Raíz -->
-      <article class="portfolio-card reveal-scale" style="--delay:0.2s" aria-label="Proyecto Raíz Arquitectura">
+      <article class="portfolio-card reveal-scale" style="--delay:0.2s" aria-label="Proyecto Raíz">
         <div class="portfolio-card__desktop">
           <div class="portfolio-card__topbar" aria-hidden="true">
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -359,7 +380,7 @@
                 poster="images/raiz_desktop.png"
                 autoplay muted loop playsinline
                 preload="none"
-                aria-label="Vista previa animada de Raíz Arquitectura"
+                aria-label="Vista previa animada de Raíz"
               ></video>
             </div>
             <div class="portfolio-card__shine" aria-hidden="true"></div>
@@ -368,14 +389,14 @@
         <div class="portfolio-card__info">
           <div class="portfolio-card__dot" aria-hidden="true"></div>
           <div>
-            <strong class="portfolio-card__name">Raíz Arquitectura</strong>
+            <strong class="portfolio-card__name">Raíz</strong>
             <span class="portfolio-card__tag">Landing Page · Alta conversión</span>
           </div>
         </div>
       </article>
 
       <!-- Lumia -->
-      <article class="portfolio-card reveal-scale" style="--delay:0.3s" aria-label="Proyecto Lumia Arquitectura">
+      <article class="portfolio-card reveal-scale" style="--delay:0.3s" aria-label="Proyecto Lumia">
         <div class="portfolio-card__desktop">
           <div class="portfolio-card__topbar" aria-hidden="true">
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -388,7 +409,7 @@
                 poster="images/lumia_desktop.png"
                 autoplay muted loop playsinline
                 preload="none"
-                aria-label="Vista previa animada de Lumia Arquitectura"
+                aria-label="Vista previa animada de Lumia"
               ></video>
             </div>
             <div class="portfolio-card__shine" aria-hidden="true"></div>
@@ -397,14 +418,14 @@
         <div class="portfolio-card__info">
           <div class="portfolio-card__dot" aria-hidden="true"></div>
           <div>
-            <strong class="portfolio-card__name">Lumia Arquitectura</strong>
+            <strong class="portfolio-card__name">Lumia</strong>
             <span class="portfolio-card__tag">Portafolio · SPA Premium</span>
           </div>
         </div>
       </article>
 
       <!-- Doce -->
-      <article class="portfolio-card reveal-scale" style="--delay:0.4s" aria-label="Proyecto Doce Arquitectura">
+      <article class="portfolio-card reveal-scale" style="--delay:0.4s" aria-label="Proyecto Doce">
         <div class="portfolio-card__desktop">
           <div class="portfolio-card__topbar" aria-hidden="true">
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -417,7 +438,7 @@
                 poster="images/doce_desktop.png"
                 autoplay muted loop playsinline
                 preload="none"
-                aria-label="Vista previa animada de Doce Arquitectura"
+                aria-label="Vista previa animada de Doce"
               ></video>
             </div>
             <div class="portfolio-card__shine" aria-hidden="true"></div>
@@ -426,14 +447,14 @@
         <div class="portfolio-card__info">
           <div class="portfolio-card__dot" aria-hidden="true"></div>
           <div>
-            <strong class="portfolio-card__name">Doce Arquitectura</strong>
+            <strong class="portfolio-card__name">Doce</strong>
             <span class="portfolio-card__tag">Multipage · Alto tráfico</span>
           </div>
         </div>
       </article>
 
       <!-- Lumina -->
-      <article class="portfolio-card reveal-scale" style="--delay:0.5s" aria-label="Proyecto Lumina Arquitectura">
+      <article class="portfolio-card reveal-scale" style="--delay:0.5s" aria-label="Proyecto Lumina">
         <div class="portfolio-card__desktop">
           <div class="portfolio-card__topbar" aria-hidden="true">
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -446,7 +467,7 @@
                 poster="images/lumia_desktop.png"
                 autoplay muted loop playsinline
                 preload="none"
-                aria-label="Vista previa animada de Lumina Arquitectura"
+                aria-label="Vista previa animada de Lumina"
               ></video>
             </div>
             <div class="portfolio-card__shine" aria-hidden="true"></div>
@@ -455,7 +476,7 @@
         <div class="portfolio-card__info">
           <div class="portfolio-card__dot" aria-hidden="true"></div>
           <div>
-            <strong class="portfolio-card__name">Lumina Arquitectura</strong>
+            <strong class="portfolio-card__name">Lumina</strong>
             <span class="portfolio-card__tag">SPA Premium · Alto impacto</span>
           </div>
         </div>
@@ -471,10 +492,10 @@
 <section class="section section--globe" id="testimonios">
   <div class="container">
     <div class="section-header reveal-block">
-      <span class="eyebrow eyebrow--dark">— Alcance Global</span>
+      <span class="eyebrow eyebrow--dark">Alcance Global</span>
       <h2 class="section-title section-title--dark">
-        Arquitectura sin fronteras:<br>
-        <em>Estudios que ya escalaron<br>con UPAGE en todo el mundo.</em>
+        Resultados sin fronteras:<br>
+        <em>Negocios que ya escalaron<br>con UPAGE en todo el mundo.</em>
       </h2>
     </div>
     <p class="section-lead section-lead--dark reveal-block" style="--delay:0.1s">
@@ -505,7 +526,7 @@
   <div class="cta-bg-lines" aria-hidden="true"></div>
   <div class="container container--center">
     <div class="final-cta reveal-block">
-      <span class="eyebrow eyebrow--gold">— ¿Empezamos?</span>
+      <span class="eyebrow eyebrow--gold">¿Empezamos?</span>
       <h2 class="final-cta__title">
         No dejes que una mala web<br>
         <em class="em--gold">arruine tus mejores obras.</em>
@@ -514,13 +535,27 @@
         Agenda una consultoría gratuita de 30 minutos.<br>
         Sin compromisos. Sin ventas agresivas. Solo claridad.
       </p>
+      <div class="price-box" id="price-box-cta" style="margin-bottom:32px;">
+        <span class="price-box__old" style="color:var(--text-muted);opacity:0.6;">Antes $1.720.000 COP</span>
+        <span class="price-box__badge">50% OFF · Tiempo limitado</span>
+        <div class="price-box__current">
+          <span class="price-box__amount is-active" data-currency="usd" style="color:var(--gold);">
+            <img class="flag-circle" src="https://flagcdn.com/w80/us.png" alt="Bandera de Estados Unidos">
+            $250 USD
+          </span>
+          <span class="price-box__amount" data-currency="cop" style="color:var(--gold);">
+            <img class="flag-circle" src="https://flagcdn.com/w80/co.png" alt="Bandera de Colombia">
+            $860.000 COP
+          </span>
+        </div>
+      </div>
       <a
         href="https://wa.link/axnt20"
         target="_blank" rel="noopener noreferrer"
         class="btn-main"
         id="final-cta-btn"
         aria-label="Agendar consultoría gratuita por WhatsApp">
-        <span class="btn-main__text">Agendar consultoría gratuita</span>
+        <span class="btn-main__text">Agendar mi consultoría gratuita</span>
         <span class="btn-main__icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>

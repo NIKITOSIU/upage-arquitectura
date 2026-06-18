@@ -8,9 +8,7 @@
 
 // ─── Selectors ──────────────────────────────────────────
 const preloader     = document.getElementById('preloader');
-const heroTitle     = document.getElementById('hero-title');
 const revealEls     = document.querySelectorAll('.reveal-block, .reveal-scale, .reveal-left, .reveal-right');
-const lineInners    = document.querySelectorAll('.line-inner');
 const iframeWraps   = document.querySelectorAll('.iframe-scale-wrap');
 
 // ─── Preloader ───────────────────────────────────────────
@@ -25,10 +23,6 @@ const iframeWraps   = document.querySelectorAll('.iframe-scale-wrap');
     setTimeout(() => {
       preloader.classList.add('done');
       document.body.style.overflow = '';
-
-      // Animate hero lines after preloader
-      setTimeout(triggerHeroLines, 200);
-
       preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
     }, wait);
   }
@@ -37,12 +31,41 @@ const iframeWraps   = document.querySelectorAll('.iframe-scale-wrap');
   else { window.addEventListener('load', hide, { once: true }); setTimeout(hide, 4500); }
 })();
 
-// ─── Hero Line Reveal ─────────────────────────────────────
-function triggerHeroLines() {
-  lineInners.forEach((el, i) => {
-    setTimeout(() => el.classList.add('visible'), i * 130);
+// ─── Hero Video: manual fade-in/fade-out loop ────────────
+(function initHeroVideoLoop() {
+  const video = document.getElementById('hero-video');
+  if (!video) return;
+
+  const FADE_DURATION = 0.5; // seconds
+  let rafId = null;
+
+  function tick() {
+    const { currentTime, duration } = video;
+    if (duration) {
+      if (currentTime < FADE_DURATION) {
+        video.style.opacity = String(currentTime / FADE_DURATION);
+      } else if (currentTime > duration - FADE_DURATION) {
+        video.style.opacity = String(Math.max(0, (duration - currentTime) / FADE_DURATION));
+      } else {
+        video.style.opacity = '1';
+      }
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  video.addEventListener('loadedmetadata', () => {
+    if (rafId === null) rafId = requestAnimationFrame(tick);
   });
-}
+
+  video.addEventListener('ended', () => {
+    video.style.opacity = '0';
+    setTimeout(() => {
+      video.currentTime = 0;
+      const p = video.play();
+      if (p && p.catch) p.catch(() => {});
+    }, 100);
+  });
+})();
 
 // ─── Dynamic iframe scale (Switched to Desktop Screenshots for performance) ──
 
@@ -67,32 +90,6 @@ function triggerHeroLines() {
   });
 
   revealEls.forEach(el => observer.observe(el));
-})();
-
-// ─── Mouse Parallax on Hero Orbs ─────────────────────────
-(function initOrbParallax() {
-  const orb1 = document.querySelector('.hero__orb--1');
-  const orb2 = document.querySelector('.hero__orb--2');
-  if (!orb1 || !orb2) return;
-
-  // Only on non-touch devices
-  if (window.matchMedia('(pointer:coarse)').matches) return;
-
-  let ticking = false;
-  window.addEventListener('mousemove', (e) => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      const cx = window.innerWidth  / 2;
-      const cy = window.innerHeight / 2;
-      const dx = (e.clientX - cx) / cx;
-      const dy = (e.clientY - cy) / cy;
-
-      orb1.style.transform = `translate(${dx * 30}px, ${dy * 22}px)`;
-      orb2.style.transform = `translate(${-dx * 25}px, ${-dy * 18}px)`;
-      ticking = false;
-    });
-  });
 })();
 
 // ─── Card 3D Tilt (Desktop only) ─────────────────────────
@@ -201,7 +198,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   const bar = document.createElement('div');
   bar.style.cssText = `
     position: fixed; top: 0; left: 0; height: 2px; width: 0%;
-    background: linear-gradient(90deg, #C9603A, #D4A843);
+    background: #D4A843;
     z-index: 9998; transition: width 0.1s linear; pointer-events: none;
   `;
   document.body.appendChild(bar);
@@ -276,6 +273,20 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   }, { threshold: 0 });
 
   ob.observe(wrap);
+})();
+
+// ─── Price Box: alternate USD / COP every few seconds ────
+(function initPriceToggle() {
+  document.querySelectorAll('.price-box__current').forEach(function(box) {
+    const amounts = box.querySelectorAll('.price-box__amount');
+    if (amounts.length < 2) return;
+    let i = 0;
+    setInterval(function() {
+      amounts[i].classList.remove('is-active');
+      i = (i + 1) % amounts.length;
+      amounts[i].classList.add('is-active');
+    }, 2800);
+  });
 })();
 
 // ─── TikTok Pixel Click Tracking ───────────────────────────

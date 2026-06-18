@@ -11,50 +11,50 @@
     {
       id: 'mexico', lat: 19.4, lon: -99.1, flag: '🇲🇽',
       location: 'Ciudad de México, México',
-      quote: 'Desde el primer mes, las consultas de proyectos premium se triplicaron. UPAGE entiende exactamente cómo posicionar arquitectura de lujo.',
-      author: 'Carlos Mendoza', role: 'Arq. Director · Mendoza & Asociados'
+      quote: 'Desde el primer mes, las citas para tratamientos premium se triplicaron. UPAGE entendió exactamente cómo presentar nuestra clínica.',
+      author: 'Dra. Renata Salas', role: 'Directora · Clínica Dental Salas'
     },
     {
       id: 'spain', lat: 40.4, lon: -3.7, flag: '🇪🇸',
       location: 'Madrid, España',
       quote: 'Lograron captar la esencia de nuestros espacios y convertirla en una experiencia digital fluida. Por fin nuestra web está a la altura de nuestras obras.',
-      author: 'Roberto Fuentes', role: 'Fundador · Fuentes Diseño Espacial'
+      author: 'Roberto Fuentes', role: 'Arquitecto Fundador · Fuentes Diseño Espacial'
     },
     {
       id: 'usa', lat: 25.8, lon: -80.2, flag: '🇺🇸',
       location: 'Miami, Estados Unidos',
-      quote: 'Los leads calificados aumentaron un 40% en dos meses. UPAGE fue la mejor inversión que hicimos para nuestro estudio este año.',
-      author: 'Elena Valbuena', role: 'CEO · Studio Arquitectura V&V'
+      quote: 'Los leads calificados aumentaron un 40% en dos meses. UPAGE fue la mejor inversión que hicimos para nuestro despacho este año.',
+      author: 'Elena Valbuena', role: 'Socia Fundadora · Valbuena & Asociados (Abogados)'
     },
     {
       id: 'colombia', lat: 4.7, lon: -74.1, flag: '🇨🇴',
       location: 'Bogotá, Colombia',
-      quote: 'La presencia digital no hacía justicia a nuestra arquitectura. UPAGE lo transformó todo — el diseño mobile es impecable.',
-      author: 'Valeria Ríos', role: 'Arq. Principal · Prisma Constructores'
+      quote: 'La presencia digital no hacía justicia a nuestro trabajo. UPAGE lo transformó todo: el diseño mobile es impecable.',
+      author: 'Valeria Ríos', role: 'Arquitecta Principal · Prisma Constructores'
     },
     {
       id: 'france', lat: 57, lon: 10, flag: '🇫🇷',
       location: 'París, Francia',
-      quote: 'En un mercado tan exigente como el parisino, necesitábamos una web que comunicara lujo desde el primer segundo. UPAGE lo entendió a la perfección.',
-      author: 'Sophie Marchand', role: 'Directora · Atelier Marchand Architecture'
+      quote: 'En un mercado tan exigente como el parisino, necesitábamos una web que comunicara confianza desde el primer segundo. UPAGE lo entendió a la perfección.',
+      author: 'Sophie Marchand', role: 'Directora · Clínica Dental Marchand'
     },
     {
       id: 'italy', lat: 39, lon: 27, flag: '🇮🇹',
       location: 'Milán, Italia',
-      quote: 'Il design del sito riflette perfettamente l\'essenza del nostro studio. I contatti qualificati sono aumentati in modo significativo dal lancio.',
-      author: 'Marco Ferretti', role: 'Fondatore · Ferretti Studio Milano'
+      quote: 'Il design del sito riflette perfettamente l\'identità del nostro studio legale. I contatti qualificati sono aumentati in modo significativo dal lancio.',
+      author: 'Marco Ferretti', role: 'Avvocato Socio · Ferretti & Studio Legale'
     },
     {
       id: 'portugal', lat: 52, lon: -20, flag: '🇵🇹',
       location: 'Lisboa, Portugal',
-      quote: 'Tínhamos um portfólio incrível mas uma presença digital fraca. A UPAGE mudou isso completamente — simples, rápida e que converte.',
-      author: 'Ana Cardoso', role: 'Sócia · Cardoso & Lima Arquitectos'
+      quote: 'Tínhamos uma reputação sólida mas uma presença digital fraca. A UPAGE mudou isso completamente: simples, rápida e que converte.',
+      author: 'Ana Cardoso', role: 'Sócia · Cardoso & Lima Advogados'
     },
     {
       id: 'argentina', lat: -34.6, lon: -58.4, flag: '🇦🇷',
       location: 'Buenos Aires, Argentina',
       quote: 'En tres semanas ya teníamos consultas de clientes que antes ni nos encontraban. La inversión se pagó sola en el primer proyecto cerrado.',
-      author: 'Martín Ibáñez', role: 'Arq. Socio · Ibáñez + Estudio'
+      author: 'Martín Ibáñez', role: 'Arquitecto Socio · Ibáñez + Estudio'
     }
   ];
 
